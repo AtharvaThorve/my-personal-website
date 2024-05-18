@@ -16,14 +16,45 @@
   }
 }
 
+/* For WebKit-based browsers (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333333; /* Dark gray color for the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555555; /* Lighter gray color on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Width of the scrollbar */
+  scrollbar-color: #333333 transparent; /* Dark gray color for the scrollbar thumb and transparent track */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: black !important; /* Set the background color to black */
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem; /* Adjust as necessary */
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem; /* Adjust as necessary */
+}
+li {
+  margin-bottom: 0.5rem; /* Adjust as necessary */
 }
 
 @layer utilities {
